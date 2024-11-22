@@ -2,6 +2,7 @@
     top: 10px;
     padding-left: 10px;
     padding-right: 10px;
+    background: var(--primary-color);
 }
 
 .menu__button {
@@ -27,12 +28,13 @@
     border: unset;
     background: var(--primary-color);
     font-size: 1.25rem;
-    font-family: Marcellus;
+    font-family: Domine;
     color: var(--text-color-2);
     line-height: 2;
     height: 50px;
     font-weight: bold;
     z-index: 1000;
+    margin-right: auto;
 }
 
 .nav_ac:hover {
@@ -180,7 +182,7 @@
     transition: color 250ms cubic-bezier(0, 0, 0.58, 1) 0s;
     padding: 4px 0px;
     text-decoration: none;
-    font-family: Marcellus;
+    font-family: Domine;
 }
 
 .the_menu .menu_item>a:hover {
@@ -195,7 +197,7 @@
 
 .menu_footer {
     bottom: 0;
-    font-family: Marcellus;
+    font-family: Domine;
     font-size: 14px;
     background: var(--primary-color);
 }

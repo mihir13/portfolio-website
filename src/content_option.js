@@ -8,19 +8,19 @@ const introdata = {
   title: "Mihir Thakker",
   // animated text right under name
   animated: {
-    first: "Developer",
+    first: "Full-Stack Developer",
     second: "Entrepreneur",
-    third: "Designer",
+    third: "UI/UX Designer",
   },
   description:
-    "Senior Operations Engineer living in Reading, United Kingdom",
-  your_img_url: "https://images.unsplash.com/photo-1628258334105-2a0b3d6efee1",
+    "Senior Operations Engineer living in Reading, United Kingdom 🇬🇧",
+  // your_img_url: "https://images.unsplash.com/photo-1628258334105-2a0b3d6efee1",
 };
 
 const dataabout = {
   title: "More about myself",
   aboutme:
-    "Dynamic IT professional with 3+ years experience in IT Project Management, IT Service Management and DevOps. Skilled in team leadership and client infrastructure management. I spend my free time developing websites, mobile apps and business management.",
+    "Dynamic IT professional with 3+ years experience in IT Project Management, IT Service Management and DevOps. Skilled in team leadership and client infrastructure management. I spend my free time developing websites, mobile apps and study business management.",
 };
 const worktimeline = [
     {
@@ -41,52 +41,51 @@ const worktimeline = [
 ];
 
 const skills = [
-    {
-        name: "HTML and CSS",
-        value: 95,
-    },
-    {
-        name: "MySQL",
-        value: 90,
-    },
-    {
-        name: "Python",
-        value: 85,
-    },
-    {
-        name: "JavaScript",
-        value: 80,
-    },
-    {
-        name: "PHP",
-        value: 75,
-    },
-    {
-        name: "Java",
-        value: 70,
-    },
-    {
-        name: "React",
-        value: 55,
-    },
-    {
-        name: "Swift",
-        value: 50,
-    },
+  {
+    name: "HTML and CSS",
+    value: 95,
+  },
+  {
+    name: "MySQL",
+    value: 90,
+  },
+  {
+    name: "Python",
+    value: 85,
+  },
+  {
+    name: "JavaScript",
+    value: 80,
+  },
+  {
+    name: "React",
+    value: 80,
+  },
+  {
+    name: "PHP",
+    value: 75,
+  },
+  {
+    name: "Java",
+    value: 60,
+  },
+  {
+    name: "Swift",
+    value: 50,
+  },
 ];
 
-const services = [{
-        title: "Web Development",
-        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed at nisl euismod urna bibendum sollicitudin.",
-    },
-    {
-        title: "Mobile Apps",
-        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed at nisl euismod urna bibendum sollicitudin.",
-    },
-    {
-        title: "Agile and DevOps Consultancy",
-        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed at nisl euismod urna bibendum sollicitudin.",
-    },
+const services = [
+  {
+    title: "Web Development 👨‍💻",
+    description:
+      "With a solid foundation in React, I have successfully built several websites and am continuously enhancing my skills to create even more innovative products.",
+  },
+  {
+    title: "Mobile Apps 📲",
+    description:
+      "With a foundational knowledge of Swift and Flutter, I aspire to develop my own mobile app in the near future.",
+  },
 ];
 
 const dataportfolio = [
@@ -169,20 +168,20 @@ const contactConfig = {
   YOUR_EMAIL: "mihirt132@gmail.com",
   // YOUR_FONE: "(555)123-4567",
   description:
-    "If you ever want to grab a coffee or just want a quick chat - you can find me on social media or message me here! ",
+    "If you ever want to grab a coffee or just want a quick chat - follow me on social media or just message me through the form!",
   // create an emailjs.com account
   // check out this tutorial https://www.emailjs.com/docs/examples/reactjs/
-  YOUR_SERVICE_ID: "service_id",
-  YOUR_TEMPLATE_ID: "template_id",
-  YOUR_USER_ID: "user_id",
+  YOUR_SERVICE_ID: "service_j31adlm",
+  YOUR_TEMPLATE_ID: "template_zse9x0m",
+  YOUR_USER_ID: "z73Wi4qeSQcXaq8ax",
 };
 
 const socialprofils = {
+  linkedin: "https://www.linkedin.com/in/mihir-thakker-265ba8164/",
   github: "https://github.com/mihir13/",
   instagram: "https://instagram.com/mihirt_",
-  //   facebook: "https://facebook.com",
-  linkedin: "https://www.linkedin.com/in/mihir-thakker-265ba8164/",
   twitter: "https://x.com/mihirr_",
+  youtube: "https://www.youtube.com/@mihirt13",
 };
 export {
     meta,

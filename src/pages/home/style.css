@@ -31,14 +31,14 @@ section {
 }
 
 .intro_sec {
-    height: calc(100vh - 60px);
+    height: calc(80vh);
     /* min-height: 700px;
     height: 100vh; */
     /* margin-top: -60px; */
 }
 
 .intro_content{
-    margin-left: 50px;
+    margin: 20px;
 }
 
 @media (max-width:991.98px) {
@@ -48,8 +48,15 @@ section {
     }
 } 
 
+@media (max-width:660px) {
+    .text {
+        display: flex;
+        flex-direction: column;
+    }
+} 
+
 img {
-    width: 260px;
+    width: 13rem;
 }
 
  /* .intro_sec .text,
@@ -90,7 +97,7 @@ img {
 
 .intro_sec .text h1 {
     font-size: 30px;
-    margin-bottom: 50px;
+    margin-bottom: 20px;
     font-weight: 700;
 }
 

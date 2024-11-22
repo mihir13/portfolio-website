@@ -78,3 +78,10 @@
 .po_item .content a:hover {
     text-decoration: none;
 }
+
+/* temporary */
+.coming_soon{
+    display: flex; 
+    justify-content:center;
+    height: 550px;
+}

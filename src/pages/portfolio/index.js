@@ -19,8 +19,9 @@ export const Portfolio = () => {
             <hr className="t_border my-4 ml-0 text-left" />
           </Col>
         </Row>
-        <div className="mb-5 po_items_ho">
-          {dataportfolio.map((data, i) => {
+        <div className="mb-5 coming_soon po_items_ho">
+          <h2>Coming Soon!</h2>
+          {/* {dataportfolio.map((data, i) => {
             return (
               <div key={i} className="po_item">
                 <img src={data.img} alt="" />
@@ -30,7 +31,7 @@ export const Portfolio = () => {
                 </div>
               </div>
             );
-          })}
+          })} */}
         </div>
       </Container>
     </HelmetProvider>
