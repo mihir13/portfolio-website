@@ -23,6 +23,8 @@
 
 .po_item img {
     max-width: 100%;
+    width: 18rem;
+
 }
 
 .po_item .content {
@@ -49,7 +51,7 @@
     opacity: 0;
     transition-delay: 1s;
     transition: 0.3s ease;
-    font-size: 20px;
+    font-size: 16px;
 }
 
 .po_item:hover {
