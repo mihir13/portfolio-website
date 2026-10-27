@@ -8,6 +8,16 @@ export default function About() {
         {site.photo && <img className="photo" src={site.photo} alt={site.name} loading="lazy" />}
         <p className="lead">{site.about}</p>
       </div>
+      {site.stats?.length > 0 && (
+        <dl className="stats">
+          {site.stats.map((s) => (
+            <div key={s.label} className="card">
+              <dt className="mono accent">{s.value}</dt>
+              <dd className="muted">{s.label}</dd>
+            </div>
+          ))}
+        </dl>
+      )}
     </Section>
   );
 }

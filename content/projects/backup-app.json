@@ -1,8 +1,8 @@
 {
   "title": "Backup App",
-  "description": "A simple app to manage your backups.",
+  "description": "A macOS desktop app that backs up folders such as Downloads, Documents and Photos to a home server. It uses native file dialogs, a restore-path picker and a progress bar for longer transfers, with a light/dark mode.",
   "image": "/uploads/backup-app.png",
   "link": "https://github.com/mihir13/backup-app",
-  "tags": [],
+  "tags": ["Python", "PyQt5", "macOS"],
   "order": 1
 }

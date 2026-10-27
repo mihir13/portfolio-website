@@ -21,6 +21,14 @@ export default function Notes() {
                 <div>
                   <h3>{n.title}</h3>
                   <p className="muted">{n.summary}</p>
+                  {n.body && (
+                    <details className="note-body">
+                      <summary>Read more</summary>
+                      {n.body.split(/\n\s*\n/).map((para, i) => (
+                        <p key={i} className="muted">{para}</p>
+                      ))}
+                    </details>
+                  )}
                 </div>
               </Tag>
             </li>

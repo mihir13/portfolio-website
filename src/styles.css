@@ -104,12 +104,24 @@ main, .nav, .footer { max-width: 960px; margin: 0 auto; padding-inline: 24px; }
 .card:hover { border-color: rgba(94, 234, 212, 0.4); }
 
 .log { list-style: none; margin: 0; padding: 0 0 0 20px; border-left: 1px solid var(--line); }
-.log li { position: relative; display: grid; grid-template-columns: 200px 1fr; gap: 20px; padding-block: 14px; }
-.log li::before { content: ""; position: absolute; left: -25px; top: 24px; width: 9px; height: 9px; border-radius: 50%; background: var(--bg); border: 2px solid var(--accent); }
+.log > li { position: relative; display: grid; grid-template-columns: 200px 1fr; gap: 20px; padding-block: 14px; }
+.log > li::before { content: ""; position: absolute; left: -25px; top: 24px; width: 9px; height: 9px; border-radius: 50%; background: var(--bg); border: 2px solid var(--accent); }
 .log h3 { margin: 0; font-size: 1.05rem; }
 .log p { margin: 2px 0 0; }
 .period { font-size: 0.82rem; padding-top: 3px; }
 
+.log .role-summary { margin: 10px 0 0; color: var(--text); max-width: 60ch; }
+.highlights { margin: 12px 0 0; padding-left: 18px; color: var(--muted); font-size: 0.95rem; }
+.highlights li { margin-bottom: 6px; padding-left: 4px; }
+.highlights li::marker { color: var(--accent); }
+.stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); gap: 14px; margin: 36px 0 0; }
+.stats .card { padding: 18px; }
+.stats dt { font-size: 1.5rem; font-weight: 700; }
+.stats dd { margin: 4px 0 0; font-size: 0.88rem; }
+.note-body { margin-top: 10px; }
+.note-body summary { cursor: pointer; font: 0.8rem var(--mono); color: var(--accent); }
+.note-body p { margin: 10px 0 0; }
+.hp { position: absolute; left: -9999px; width: 1px; height: 1px; opacity: 0; }
 .skill-groups { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px; }
 .skill-groups h3 { margin: 0 0 14px; font-size: 0.85rem; font-weight: 500; }
 .chips { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 8px; }
@@ -152,7 +164,7 @@ main, .nav, .footer { max-width: 960px; margin: 0 auto; padding-inline: 24px; }
   .nav nav { gap: 14px; font-size: 0.75rem; }
   .about, .contact, .note { grid-template-columns: 1fr; }
   .note { gap: 4px; }
-  .log li { grid-template-columns: 1fr; gap: 4px; }
+  .log > li { grid-template-columns: 1fr; gap: 4px; }
   .hero { min-height: 80vh; }
 }
 @media (prefers-reduced-motion: reduce) {

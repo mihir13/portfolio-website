@@ -11,6 +11,14 @@ export default function Experience() {
             <div>
               <h3>{e.title}</h3>
               <p className="muted">{e.company}</p>
+              {e.summary && <p className="role-summary">{e.summary}</p>}
+              {e.highlights?.length > 0 && (
+                <ul className="highlights">
+                  {e.highlights.map((h, j) => (
+                    <li key={j}>{h}</li>
+                  ))}
+                </ul>
+              )}
             </div>
           </li>
         ))}

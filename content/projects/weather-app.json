@@ -1,8 +1,8 @@
 {
   "title": "Weather App",
-  "description": "A simple app to check the weather around you.",
+  "description": "A desktop app that shows live conditions, temperature and a weather icon for any city, using data from the OpenWeatherMap API.",
   "image": "/uploads/weather-app.png",
   "link": "https://github.com/mihir13/WeatherApp",
-  "tags": [],
+  "tags": ["Python", "Tkinter", "REST API"],
   "order": 2
 }
