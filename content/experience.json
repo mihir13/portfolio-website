@@ -1,7 +1,22 @@
 {
   "items": [
-    { "title": "Senior Operations Engineer", "company": "Automation Consultants", "period": "Oct 2024 – present" },
-    { "title": "Technical Operations Engineer", "company": "Automation Consultants", "period": "Oct 2023 – Sep 2024" },
-    { "title": "Operations Engineer", "company": "Automation Consultants", "period": "Sep 2021 – Sep 2023" }
+    {
+      "title": "Senior Operations Engineer",
+      "company": "Automation Consultants",
+      "period": "Oct 2024 – present",
+      "summary": "Lead Team Atlas, a managed-services team, covering customer onboarding, infrastructure upgrade projects and service desk improvements alongside line management and sprint planning."
+    },
+    {
+      "title": "Technical Operations Engineer",
+      "company": "Automation Consultants",
+      "period": "Oct 2023 – Sep 2024",
+      "summary": "Took over leading Team Atlas and project-managed large Atlassian migrations, from planning and testing through to out-of-hours cutovers, while writing the team's SOPs and new-starter guides."
+    },
+    {
+      "title": "Operations Engineer",
+      "company": "Automation Consultants",
+      "period": "Sep 2021 – Sep 2023",
+      "summary": "Handled managed-service tickets end to end and delivered Jira and Confluence upgrades and AWS patching for customers with minimal downtime."
+    }
   ]
 }

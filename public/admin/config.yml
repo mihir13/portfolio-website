@@ -25,6 +25,13 @@ collections:
           - { name: intro, label: Hero intro, widget: text }
           - { name: about, label: About text, widget: text }
           - { name: photo, label: Photo, widget: image, required: false }
+          - name: stats
+            label: Headline numbers
+            widget: list
+            required: false
+            fields:
+              - { name: value, label: Value, widget: string }
+              - { name: label, label: Label, widget: string }
           - { name: cv, label: CV (PDF), widget: file, required: false }
           - { name: email, label: Email, widget: string }
           - { name: contact_blurb, label: Contact blurb, widget: text }
@@ -48,6 +55,8 @@ collections:
               - { name: title, label: Job title, widget: string }
               - { name: company, label: Company, widget: string }
               - { name: period, label: Period, widget: string }
+              - { name: summary, label: Summary (1-2 sentences), widget: text }
+              - { name: highlights, label: Highlights, widget: list, required: false, field: { name: highlight, label: Highlight, widget: text } }
       - name: skills
         label: Skills
         file: content/skills.json
@@ -86,3 +95,4 @@ collections:
       - { name: date, label: Date, widget: datetime, time_format: false, date_format: "YYYY-MM-DD", format: "YYYY-MM-DD" }
       - { name: summary, label: Summary, widget: text }
       - { name: link, label: Link (optional), widget: string, required: false }
+      - { name: body, label: Full text (optional, blank line between paragraphs), widget: text, required: false }

@@ -1,7 +1,11 @@
 {
   "name": "Mihir Thakker",
   "headline": "Senior Operations Engineer",
-  "roles": ["ITSM", "DevOps", "TechOps"],
+  "roles": [
+    "ITSM",
+    "DevOps",
+    "TechOps"
+  ],
   "location": "Reading, United Kingdom",
   "status": "Open to coffee chats and networking",
   "intro": "I keep complex IT services running smoothly and build websites and apps in my spare time.",
@@ -16,5 +20,19 @@
     "instagram": "https://instagram.com/mihirt_",
     "twitter": "https://x.com/mihirr_",
     "youtube": "https://www.youtube.com/@mihirt13"
-  }
+  },
+  "stats": [
+    {
+      "value": "14+",
+      "label": "organisations supported"
+    },
+    {
+      "value": "253",
+      "label": "knowledge-base pages written"
+    },
+    {
+      "value": "18% → 73%",
+      "label": "first-response SLA, 2023 to 2026"
+    }
+  ]
 }

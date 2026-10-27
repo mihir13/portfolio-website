@@ -20,6 +20,11 @@ export default function Contact() {
     e.preventDefault();
     const form = e.currentTarget;
     const data = new FormData(form);
+    // Honeypot: real visitors never fill this hidden field, bots usually do.
+    if (data.get("website")) {
+      form.reset();
+      return setState({ status: "ok", msg: "Message sent. Thanks, I'll reply soon." });
+    }
     setState({ status: "sending", msg: "" });
     try {
       await emailjsLib.send(
@@ -65,6 +70,7 @@ export default function Contact() {
           </div>
         </div>
         <form onSubmit={submit} className="card form">
+          <input className="hp" name="website" tabIndex="-1" autoComplete="off" aria-hidden="true" />
           <label>Name<input name="name" required autoComplete="name" /></label>
           <label>Email<input name="email" type="email" required autoComplete="email" /></label>
           <label>Message<textarea name="message" rows="5" required /></label>
