@@ -1,0 +1,7 @@
+{
+  "groups": [
+    { "name": "Web", "skills": ["HTML & CSS", "JavaScript", "React", "PHP"] },
+    { "name": "Backend & Data", "skills": ["Python", "MySQL", "Java"] },
+    { "name": "Mobile", "skills": ["Swift"] }
+  ]
+}
