@@ -25,6 +25,7 @@ collections:
           - { name: intro, label: Hero intro, widget: text }
           - { name: about, label: About text, widget: text }
           - { name: photo, label: Photo, widget: image, required: false }
+          - { name: cv, label: CV (PDF), widget: file, required: false }
           - { name: email, label: Email, widget: string }
           - { name: contact_blurb, label: Contact blurb, widget: text }
           - name: socials
@@ -72,3 +73,16 @@ collections:
       - { name: link, label: Link, widget: string }
       - { name: tags, label: Tags, widget: list, required: false, field: { name: tag, label: Tag, widget: string } }
       - { name: order, label: Order (1 = first), widget: number, value_type: int, default: 50 }
+
+  - name: notes
+    label: Notes
+    folder: content/notes
+    extension: json
+    format: json
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - { name: title, label: Title, widget: string }
+      - { name: date, label: Date, widget: datetime, time_format: false, date_format: "YYYY-MM-DD", format: "YYYY-MM-DD" }
+      - { name: summary, label: Summary, widget: text }
+      - { name: link, label: Link (optional), widget: string, required: false }

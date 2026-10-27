@@ -2,7 +2,7 @@ import { useState } from "react";
 import emailjsLib from "@emailjs/browser";
 import { FaGithub, FaLinkedin, FaInstagram, FaYoutube } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
-import { site, emailjs } from "../content.js";
+import { site, notes, emailjs } from "../content.js";
 import Section from "./Section.jsx";
 
 const icons = {
@@ -41,13 +41,18 @@ export default function Contact() {
   };
 
   return (
-    <Section id="contact" index={5} title="Contact">
+    <Section id="contact" index={notes.length ? 6 : 5} title="Contact">
       <div className="contact">
         <div>
           <p className="lead">{site.contact_blurb}</p>
           <p className="mono">
             <a className="accent" href={`mailto:${site.email}`}>{site.email}</a>
           </p>
+          {site.cv && (
+            <p>
+              <a className="btn" href={site.cv} target="_blank" rel="noreferrer">Download CV</a>
+            </p>
+          )}
           <div className="socials">
             {Object.entries(site.socials).map(([k, url]) => {
               const Icon = icons[k];

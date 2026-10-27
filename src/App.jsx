@@ -4,6 +4,7 @@ import About from "./components/About.jsx";
 import Experience from "./components/Experience.jsx";
 import Skills from "./components/Skills.jsx";
 import Projects from "./components/Projects.jsx";
+import Notes from "./components/Notes.jsx";
 import Contact from "./components/Contact.jsx";
 import { site } from "./content.js";
 
@@ -17,6 +18,7 @@ export default function App() {
         <Experience />
         <Skills />
         <Projects />
+        <Notes />
         <Contact />
       </main>
       <footer className="footer mono muted">
