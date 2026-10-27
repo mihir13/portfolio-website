@@ -12,7 +12,7 @@ All text lives in `content/` and is editable without touching code:
 - `content/projects/*.json`: one file per project
 
 **Web editor:** go to `https://mihirthakker.com/admin`, log in with GitHub, edit and publish.
-Each publish is a commit to `main`; Netlify rebuilds and the site updates in about a minute.
+Each publish is a commit to `master`; Netlify rebuilds and the site updates in about a minute.
 
 ### One-time CMS setup
 1. GitHub → Settings → Developer settings → OAuth Apps → New. Homepage URL `https://mihirthakker.com`,

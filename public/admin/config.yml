@@ -3,7 +3,7 @@
 backend:
   name: github
   repo: mihir13/portfolio-website
-  branch: main
+  branch: master
   # Requires a GitHub OAuth app configured in Netlify (see README).
 
 media_folder: public/uploads
