@@ -46,7 +46,7 @@ export default function Contact() {
   };
 
   return (
-    <Section id="contact" index={notes.length ? 6 : 5} title="Contact">
+    <Section id="contact" index={notes.length ? 7 : 6} title="Contact">
       <div className="contact">
         <div>
           <p className="lead">{site.contact_blurb}</p>

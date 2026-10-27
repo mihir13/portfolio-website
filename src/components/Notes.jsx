@@ -9,7 +9,7 @@ const fmt = (d) => {
 export default function Notes() {
   if (!notes.length) return null;
   return (
-    <Section id="notes" index={5} title="Notes">
+    <Section id="notes" index={6} title="Notes">
       <ul className="notes">
         {notes.map((n) => {
           const Tag = n.link ? "a" : "div";

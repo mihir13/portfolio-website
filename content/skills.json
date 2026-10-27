@@ -1,7 +1,73 @@
 {
   "groups": [
-    { "name": "Web", "skills": ["HTML & CSS", "JavaScript", "React", "PHP"] },
-    { "name": "Backend & Data", "skills": ["Python", "MySQL", "Java"] },
-    { "name": "Mobile", "skills": ["Swift"] }
+    {
+      "name": "Delivery & governance",
+      "skills": [
+        "Project planning",
+        "Phased delivery",
+        "Change control",
+        "Risk & dependency management",
+        "Go/No-Go decisions",
+        "Cutover & UAT coordination",
+        "Estimation & proposals",
+        "Agile / Scrum"
+      ]
+    },
+    {
+      "name": "Customer engagement",
+      "skills": [
+        "Discovery workshops",
+        "Requirements gathering",
+        "Onboarding",
+        "Knowledge transfer",
+        "Service reviews"
+      ]
+    },
+    {
+      "name": "Service transition",
+      "skills": [
+        "Handover",
+        "Runbooks & SOPs",
+        "SLA frameworks",
+        "Incident, problem & change management",
+        "ITIL 4"
+      ]
+    },
+    {
+      "name": "Infrastructure & security",
+      "skills": [
+        "AWS (EC2, RDS, CloudWatch)",
+        "Azure (VMs, AD SSO & MFA)",
+        "Linux",
+        "VPN & TLS",
+        "Vulnerability response",
+        "Role-based access control"
+      ]
+    },
+    {
+      "name": "Platforms & AI",
+      "skills": [
+        "Jira",
+        "Confluence",
+        "Jira Service Management",
+        "Tempo",
+        "monday.com",
+        "Zapier",
+        "Snowflake",
+        "Claude",
+        "Microsoft Copilot"
+      ]
+    },
+    {
+      "name": "Building on the side",
+      "skills": [
+        "Python",
+        "JavaScript",
+        "React",
+        "HTML & CSS",
+        "MySQL",
+        "PHP"
+      ]
+    }
   ]
 }

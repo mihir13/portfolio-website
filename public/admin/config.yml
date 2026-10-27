@@ -57,6 +57,23 @@ collections:
               - { name: period, label: Period, widget: string }
               - { name: summary, label: Summary (1-2 sentences), widget: text }
               - { name: highlights, label: Highlights, widget: list, required: false, field: { name: highlight, label: Highlight, widget: text } }
+      - name: certifications
+        label: Certifications & education
+        file: content/certifications.json
+        fields:
+          - name: items
+            label: Certifications
+            widget: list
+            fields:
+              - { name: name, label: Name, widget: string }
+              - { name: detail, label: Year or status, widget: string }
+          - name: education
+            label: Education
+            widget: object
+            fields:
+              - { name: degree, label: Degree, widget: string }
+              - { name: school, label: School, widget: string }
+              - { name: detail, label: Detail, widget: string }
       - name: skills
         label: Skills
         file: content/skills.json
@@ -67,6 +84,23 @@ collections:
             fields:
               - { name: name, label: Group name, widget: string }
               - { name: skills, label: Skills, widget: list, field: { name: skill, label: Skill, widget: string } }
+
+  - name: case_studies
+    label: Case studies
+    folder: content/case-studies
+    extension: json
+    format: json
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { name: title, label: Title, widget: string }
+      - { name: category, label: Category, widget: string }
+      - { name: tags, label: Tags, widget: list, required: false, field: { name: tag, label: Tag, widget: string } }
+      - { name: order, label: Order (1 = first), widget: number, value_type: int, default: 50 }
+      - { name: problem, label: Problem, widget: text }
+      - { name: approach, label: Approach, widget: text }
+      - { name: result, label: Result, widget: text }
+      - { name: lesson, label: Lesson, widget: text }
 
   - name: projects
     label: Projects
