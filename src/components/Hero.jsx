@@ -19,6 +19,7 @@ export default function Hero() {
       <div className="hero-actions">
         <a className="btn primary" href="#projects">View projects</a>
         <a className="btn" href="#contact">Get in touch</a>
+        {site.cv && <a className="btn" href={site.cv} target="_blank" rel="noreferrer">CV</a>}
         <a className="icon-btn" href={site.socials.github} aria-label="GitHub"><FaGithub /></a>
         <a className="icon-btn" href={site.socials.linkedin} aria-label="LinkedIn"><FaLinkedin /></a>
       </div>
