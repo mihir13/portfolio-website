@@ -1,0 +1,74 @@
+# Decap CMS: edit the site at https://mihirthakker.com/admin
+# Saves go to GitHub as commits; Netlify then rebuilds the site automatically.
+backend:
+  name: github
+  repo: mihir13/portfolio-website
+  branch: main
+  # Requires a GitHub OAuth app configured in Netlify (see README).
+
+media_folder: public/uploads
+public_folder: /uploads
+
+collections:
+  - name: settings
+    label: Site settings
+    files:
+      - name: site
+        label: Profile & contact
+        file: content/site.json
+        fields:
+          - { name: name, label: Name, widget: string }
+          - { name: headline, label: Headline, widget: string }
+          - { name: roles, label: Rotating words in hero, widget: list, field: { name: role, label: Role, widget: string } }
+          - { name: location, label: Location, widget: string }
+          - { name: status, label: Status line, widget: string }
+          - { name: intro, label: Hero intro, widget: text }
+          - { name: about, label: About text, widget: text }
+          - { name: photo, label: Photo, widget: image, required: false }
+          - { name: email, label: Email, widget: string }
+          - { name: contact_blurb, label: Contact blurb, widget: text }
+          - name: socials
+            label: Social links
+            widget: object
+            fields:
+              - { name: linkedin, label: LinkedIn, widget: string, required: false }
+              - { name: github, label: GitHub, widget: string, required: false }
+              - { name: instagram, label: Instagram, widget: string, required: false }
+              - { name: twitter, label: X / Twitter, widget: string, required: false }
+              - { name: youtube, label: YouTube, widget: string, required: false }
+      - name: experience
+        label: Experience
+        file: content/experience.json
+        fields:
+          - name: items
+            label: Roles (newest first)
+            widget: list
+            fields:
+              - { name: title, label: Job title, widget: string }
+              - { name: company, label: Company, widget: string }
+              - { name: period, label: Period, widget: string }
+      - name: skills
+        label: Skills
+        file: content/skills.json
+        fields:
+          - name: groups
+            label: Skill groups
+            widget: list
+            fields:
+              - { name: name, label: Group name, widget: string }
+              - { name: skills, label: Skills, widget: list, field: { name: skill, label: Skill, widget: string } }
+
+  - name: projects
+    label: Projects
+    folder: content/projects
+    extension: json
+    format: json
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { name: title, label: Title, widget: string }
+      - { name: description, label: Description, widget: text }
+      - { name: image, label: Screenshot, widget: image, required: false }
+      - { name: link, label: Link, widget: string }
+      - { name: tags, label: Tags, widget: list, required: false, field: { name: tag, label: Tag, widget: string } }
+      - { name: order, label: Order (1 = first), widget: number, value_type: int, default: 50 }

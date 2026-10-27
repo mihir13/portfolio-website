@@ -1,0 +1,19 @@
+{
+  "name": "Mihir Thakker",
+  "headline": "Senior Operations Engineer",
+  "roles": ["ITSM", "DevOps", "TechOps"],
+  "location": "Reading, United Kingdom",
+  "status": "Open to coffee chats and networking",
+  "intro": "I keep complex IT services running smoothly and build websites and apps in my spare time.",
+  "about": "Dynamic IT professional with 3+ years of experience in IT Project Management, IT Service Management and DevOps. I spend my free time developing websites and mobile apps, and studying business management.",
+  "photo": "/uploads/profile.png",
+  "email": "mihirt132@gmail.com",
+  "contact_blurb": "If you ever want to grab a coffee or just want to network, follow me on social media or send me a message.",
+  "socials": {
+    "linkedin": "https://www.linkedin.com/in/mihir-thakker-265ba8164/",
+    "github": "https://github.com/mihir13/",
+    "instagram": "https://instagram.com/mihirt_",
+    "twitter": "https://x.com/mihirr_",
+    "youtube": "https://www.youtube.com/@mihirt13"
+  }
+}
