@@ -1,0 +1,15 @@
+{
+  "title": "Two failures during an out-of-hours upgrade",
+  "category": "Incident response",
+  "tags": [
+    "Jira",
+    "Azure",
+    "MFA",
+    "Communication"
+  ],
+  "order": 4,
+  "problem": "During an out-of-hours Jira upgrade for a customer, two problems hit at once. A departed colleague's MFA device blocked my sign-in, and an Azure guest-agent crash cut access for the whole organisation.",
+  "approach": "I worked both issues with the customer's operations manager while the upgrade window was still open. I also warned the customer that the system would be slow while its caches warmed after the upgrade, before they asked.",
+  "result": "Both problems were resolved the same night and the upgrade completed.",
+  "lesson": "Tell the customer what to expect before they notice it, and check who holds the access you depend on before the window starts."
+}

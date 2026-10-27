@@ -12,8 +12,9 @@ export default function Notes() {
     <Section id="notes" index={6} title="Notes">
       <ul className="notes">
         {notes.map((n) => {
-          const Tag = n.link ? "a" : "div";
-          const props = n.link ? { href: n.link, target: "_blank", rel: "noreferrer" } : {};
+          const asLink = n.link && !n.body;
+          const Tag = asLink ? "a" : "div";
+          const props = asLink ? { href: n.link, target: "_blank", rel: "noreferrer" } : {};
           return (
             <li key={n.title}>
               <Tag className="card note" {...props}>
@@ -27,6 +28,11 @@ export default function Notes() {
                       {n.body.split(/\n\s*\n/).map((para, i) => (
                         <p key={i} className="muted">{para}</p>
                       ))}
+                      {n.link && (
+                        <p>
+                          <a className="accent" href={n.link} target="_blank" rel="noreferrer">View the code on GitHub →</a>
+                        </p>
+                      )}
                     </details>
                   )}
                 </div>
