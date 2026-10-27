@@ -1,0 +1,7 @@
+{
+  "title": "Rebuilding this site: from a template to a managed pipeline",
+  "date": "2026-10-27",
+  "summary": "I replaced a Create React App template with a fast, content-managed site that redeploys whenever I merge a change.",
+  "link": "https://github.com/mihir13/portfolio-website",
+  "body": "The old site was a client-rendered template with the content tangled into the code. I rebuilt it on Vite and React, moved everything I might want to change into plain JSON files, and put a web editor (Decap CMS) in front of them, so I can update my experience, projects and notes from a browser.\n\nThe delivery path is deliberately simple: a change is committed to GitHub, Netlify builds it, and Cloudflare serves it. Any change goes through a pull request first, so a broken build never reaches the live site.\n\nI built it with Claude Code as a pairing partner, which made it quick to try a design, check it in a browser and refine it. The part that mattered most was the same as in my day job: keep the change small, have a way back, and check the result before telling anyone it's done."
+}
