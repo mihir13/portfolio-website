@@ -3,9 +3,15 @@
 import site from "../content/site.json";
 import experience from "../content/experience.json";
 import skills from "../content/skills.json";
+import certifications from "../content/certifications.json";
 
 const projectFiles = import.meta.glob("../content/projects/*.json", { eager: true });
 const projects = Object.values(projectFiles)
+  .map((m) => m.default ?? m)
+  .sort((a, b) => (a.order ?? 99) - (b.order ?? 99));
+
+const caseFiles = import.meta.glob("../content/case-studies/*.json", { eager: true });
+const caseStudies = Object.values(caseFiles)
   .map((m) => m.default ?? m)
   .sort((a, b) => (a.order ?? 99) - (b.order ?? 99));
 
@@ -21,4 +27,4 @@ const emailjs = {
   publicKey: "z73Wi4qeSQcXaq8ax",
 };
 
-export { site, experience, skills, projects, notes, emailjs };
+export { site, experience, skills, certifications, caseStudies, projects, notes, emailjs };

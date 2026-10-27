@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { FiMoon, FiSun } from "react-icons/fi";
 import { notes } from "../content.js";
 
-const links = ["about", "experience", "skills", "projects", ...(notes.length ? ["notes"] : []), "contact"];
+const links = ["about", "experience", "work", "skills", "projects", ...(notes.length ? ["notes"] : []), "contact"];
 
 const systemTheme = () =>
   window.matchMedia("(prefers-color-scheme: light)").matches ? "light" : "dark";

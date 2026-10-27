@@ -1,0 +1,14 @@
+{
+  "title": "Tracing a customer incident with AI, safely",
+  "category": "AI & automation",
+  "tags": [
+    "Claude",
+    "Rovo",
+    "Scripting"
+  ],
+  "order": 2,
+  "problem": "Finding the cause of a customer incident from large amounts of logs and configuration data typically took about a day, and that data can't just be pasted into an AI tool.",
+  "approach": "I wrote a script to redact sensitive data first, then used Claude and Rovo to analyse and cross-check what remained.",
+  "result": "The incident was traced in 30 minutes instead of about a day. The same approach has helped produce around 30 runbooks and SOPs since late 2024.",
+  "lesson": "Redact before you prompt. The speed-up only matters if the data was safe to use."
+}

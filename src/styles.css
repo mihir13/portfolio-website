@@ -122,6 +122,19 @@ main, .nav, .footer { max-width: 960px; margin: 0 auto; padding-inline: 24px; }
 .note-body summary { cursor: pointer; font: 0.8rem var(--mono); color: var(--accent); }
 .note-body p { margin: 10px 0 0; }
 .hp { position: absolute; left: -9999px; width: 1px; height: 1px; opacity: 0; }
+.cases { display: grid; gap: 16px; }
+.case h3 { margin: 4px 0 14px; font-size: 1.15rem; }
+.case-kind { margin: 0; font-size: 0.78rem; }
+.case dl { margin: 0 0 14px; display: grid; gap: 10px; }
+.case dl > div { display: grid; grid-template-columns: 90px 1fr; gap: 14px; }
+.case dt { font-size: 0.78rem; padding-top: 3px; }
+.case dd { margin: 0; }
+.case-result dd { color: var(--accent); font-weight: 500; }
+.creds { margin-top: 16px; }
+.creds h3 { margin: 0 0 12px; font-size: 0.85rem; font-weight: 500; }
+.creds ul { list-style: none; margin: 0; padding: 0; }
+.creds li { display: flex; justify-content: space-between; gap: 16px; padding: 8px 0; border-top: 1px solid var(--line); }
+.creds li:first-child { border-top: 0; }
 .skill-groups { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px; }
 .skill-groups h3 { margin: 0 0 14px; font-size: 0.85rem; font-weight: 500; }
 .chips { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 8px; }
@@ -162,6 +175,8 @@ main, .nav, .footer { max-width: 960px; margin: 0 auto; padding-inline: 24px; }
   .nav { padding-inline: 16px; gap: 12px; }
   .nav-right { gap: 10px; }
   .nav nav { gap: 14px; font-size: 0.75rem; }
+  .case dl > div { grid-template-columns: 1fr; gap: 2px; }
+  .creds li { flex-direction: column; gap: 2px; }
   .about, .contact, .note { grid-template-columns: 1fr; }
   .note { gap: 4px; }
   .log > li { grid-template-columns: 1fr; gap: 4px; }

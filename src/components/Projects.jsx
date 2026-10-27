@@ -4,7 +4,7 @@ import Section from "./Section.jsx";
 
 export default function Projects() {
   return (
-    <Section id="projects" index={4} title="Projects">
+    <Section id="projects" index={5} title="Projects">
       <div className="project-grid">
         {projects.map((p) => (
           <a key={p.title} className="card project" href={p.link} target="_blank" rel="noreferrer">

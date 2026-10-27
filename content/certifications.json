@@ -1,0 +1,25 @@
+{
+  "items": [
+    {
+      "name": "ITIL 4 Foundation",
+      "detail": "2025"
+    },
+    {
+      "name": "Microsoft Azure Fundamentals (AZ-900)",
+      "detail": "2023"
+    },
+    {
+      "name": "monday.com Professional Services Sponsor",
+      "detail": "2025"
+    },
+    {
+      "name": "AWS Certified Solutions Architect – Associate",
+      "detail": "In progress"
+    }
+  ],
+  "education": {
+    "degree": "BSc Computing and Management",
+    "school": "Loughborough University",
+    "detail": "2:1, 2017–2021"
+  }
+}

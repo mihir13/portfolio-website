@@ -1,0 +1,14 @@
+{
+  "title": "Replanning a cutover so a rollback could be retried",
+  "category": "Project management",
+  "tags": [
+    "Cutover",
+    "Jira",
+    "Risk"
+  ],
+  "order": 1,
+  "problem": "A customer's Jira merger had one out-of-hours production window. Looking at the timings, it left no room to roll back and try again if something failed.",
+  "approach": "I split the work into two windows, added rollback dry runs and pre-cutover checks, and ran Go/No-Go decisions with the customer before each one.",
+  "result": "Both production windows completed with zero recorded rollbacks.",
+  "lesson": "A rollback plan only counts if you have rehearsed it and left time to use it."
+}

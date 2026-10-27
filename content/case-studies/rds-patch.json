@@ -1,0 +1,14 @@
+{
+  "title": "Patching a production database with no downtime",
+  "category": "Infrastructure",
+  "tags": [
+    "AWS",
+    "RDS",
+    "Multi-AZ"
+  ],
+  "order": 3,
+  "problem": "AWS set a deadline for a mandatory operating-system patch on a customer's RDS database, and the production service had to stay up.",
+  "approach": "I scheduled the patch ahead of the deadline and relied on Multi-AZ failover so production kept serving. I also flagged that the staging database was not Multi-AZ and would need a scheduled outage.",
+  "result": "Effectively zero production downtime, with the patch applied before AWS's deadline.",
+  "lesson": "Check which environments share the safety net before promising no downtime."
+}
