@@ -38,6 +38,8 @@ export default function GithubActivity() {
   const [failed, setFailed] = useState(false);
 
   useEffect(() => {
+    // The card is hidden on phones, so don't spend a GitHub request on it there.
+    if (window.matchMedia("(max-width: 720px)").matches) return;
     if (!user) return setFailed(true);
     let live = true;
     loadRepos().then((d) => live && setRepos(d)).catch(() => live && setFailed(true));
