@@ -1,19 +1,4 @@
 {
-  "name": "Mihir Thakker",
-  "headline": "Senior Operations Engineer",
-  "roles": [
-    "DevOps",
-    "Project Management",
-    "Technical Solutions"
-  ],
-  "location": "Reading, United Kingdom",
-  "status": "Open to coffee chats and networking",
-  "intro": "I plan technical change from scoping to cutover and hand it over into live support, across cloud, Linux and Jira-based environments.",
-  "about": "Senior Operations Engineer and team lead at a technology consultancy, with over two and a half years as a project manager in practice across infrastructure upgrades, migrations and customer onboarding. I work with engineers, vendors and customer technical leads, and hand projects over into live support. I use AI tools daily for documentation and analysis. Outside work I build websites and apps and study business management.",
-  "photo": "/uploads/profile.png",
-  "cv": "/uploads/Mihir CV 2026.pdf",
-  "email": "mihirt132@gmail.com",
-  "contact_blurb": "If you ever want to grab a coffee or just want to network, follow me on social media or send me a message.",
   "socials": {
     "linkedin": "https://www.linkedin.com/in/mihir-thakker-265ba8164/",
     "github": "https://github.com/mihir13/",
@@ -21,6 +6,21 @@
     "twitter": "https://x.com/mihirr_",
     "youtube": "https://www.youtube.com/@mihirt13"
   },
+  "name": "Mihir Thakker",
+  "intro": "I plan technical change from scoping to cutover and hand it over into live support, across cloud, Linux and Jira-based environments.",
+  "about": "Senior Operations Engineer and team lead at a technology consultancy, with over two and a half years as a project manager in practice across infrastructure upgrades, migrations and customer onboarding. I work with engineers, vendors and customer technical leads, and hand projects over into live support. I use AI tools daily for documentation and analysis. Outside work I build websites and apps and study business management.",
+  "photo": "/uploads/profile.png",
+  "status": "Open to networking",
+  "cv": "/uploads/Mihir CV 2026.pdf",
+  "headline": "Senior Operations Engineer",
+  "location": "Reading 🇬🇧 & Dubai 🇦🇪",
+  "email": "mihirt132@gmail.com",
+  "contact_blurb": "If you ever want to grab a coffee or just want to network, follow me on social media or send me a message.",
+  "roles": [
+    "DevOps",
+    "Project Management",
+    "Technical Solutions"
+  ],
   "stats": [
     {
       "value": "14+",
