@@ -25,6 +25,7 @@ collections:
           - { name: intro, label: Hero intro, widget: text }
           - { name: about, label: About text, widget: text }
           - { name: photo, label: Photo, widget: image, required: false }
+          - { name: now, label: Right now lines (terminal card), widget: list, required: false, field: { name: line, label: Line, widget: string } }
           - name: stats
             label: Headline numbers
             widget: list
