@@ -36,6 +36,8 @@ export default function TerminalCard() {
   const [step, setStep] = useState(0);
 
   useEffect(() => {
+    // Hidden on phones, so skip the typing animation there.
+    if (window.matchMedia("(max-width: 720px)").matches) return setStep(total);
     if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return setStep(total);
     const id = setInterval(() => setStep((s) => (s >= total ? s : s + 1)), 55);
     return () => clearInterval(id);

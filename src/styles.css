@@ -175,7 +175,7 @@ main, .nav, .footer { max-width: 960px; margin: 0 auto; padding-inline: 24px; }
 @keyframes pulse { 70% { box-shadow: 0 0 0 8px transparent; } 100% { box-shadow: 0 0 0 0 transparent; } }
 
 @media (max-width: 720px) {
-  .dash { display: none; }
+  .dash, .term { display: none; }
   .nav { padding-inline: 16px; gap: 12px; }
   .nav-right { gap: 10px; }
   .nav nav { gap: 14px; font-size: 0.75rem; }
@@ -184,7 +184,6 @@ main, .nav, .footer { max-width: 960px; margin: 0 auto; padding-inline: 24px; }
   .about, .contact, .note { grid-template-columns: 1fr; }
   .note { gap: 4px; }
   .log > li { grid-template-columns: 1fr; gap: 4px; }
-  .hero { min-height: 80vh; }
 }
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
