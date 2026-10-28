@@ -1,0 +1,13 @@
+{
+  "title": "Personal Finance Tracker",
+  "description": "A self-hosted finance tracker that turns messy monthly bank exports (CSV or PDF) into cash-flow views, budget plans and a debt-payoff strategy. Built with Next.js and SQLite, with all data kept on your own machine.",
+  "image": "/uploads/finance-tracker.png",
+  "link": "https://github.com/mihir13/finance-tracker",
+  "tags": [
+    "Next.js",
+    "React",
+    "SQLite",
+    "PDF parsing"
+  ],
+  "order": 1
+}

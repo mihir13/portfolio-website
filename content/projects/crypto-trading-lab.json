@@ -1,0 +1,14 @@
+{
+  "title": "Crypto Trading Lab",
+  "description": "A paper-trading lab for crypto perpetual futures with a cost-aware backtester, swappable strategies and live paper bots. Designed to keep backtests honest: no lookahead, out-of-sample tests and random-entry baselines. It never places real orders.",
+  "image": "/uploads/crypto-trading-lab.png",
+  "link": "https://github.com/mihir13/crypto-trading-lab",
+  "tags": [
+    "Python",
+    "FastAPI",
+    "SQLite",
+    "pandas",
+    "Backtesting"
+  ],
+  "order": 2
+}
