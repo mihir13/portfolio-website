@@ -9,11 +9,15 @@
   "name": "Mihir Thakker",
   "intro": "I like making technical change boring in the best way: planned, rehearsed and handed over cleanly. When I'm not doing that for customers, I'm building my own tools.",
   "about": "Senior Operations Engineer and team lead at a technology consultancy, with over two and a half years as a project manager in practice across infrastructure upgrades, migrations and customer onboarding. I work with engineers, vendors and customer technical leads, and hand projects over into live support. I use AI tools daily for documentation and analysis. Outside work I build websites and apps and study business management.",
-  "photo": "/uploads/profile.png",
+  "photo": "/uploads/img_0771.jpg",
   "status": "Open to networking",
   "cv": "/uploads/Mihir CV 2026.pdf",
   "headline": "Senior Operations Engineer",
   "location": "Reading 🇬🇧 & Dubai 🇦🇪",
+  "now": [
+    "Studying for the AWS Solutions Architect Associate exam",
+    "Building side projects in Next.js and Python"
+  ],
   "email": "mihirt132@gmail.com",
   "contact_blurb": "If you ever want to grab a coffee or just want to network, follow me on social media or send me a message.",
   "roles": [
@@ -34,9 +38,5 @@
       "value": "5 yrs",
       "label": "running live customer services, from graduate engineer to team lead"
     }
-  ],
-  "now": [
-    "Studying for the AWS Solutions Architect Associate exam",
-    "Building side projects in Next.js and Python"
   ]
 }
