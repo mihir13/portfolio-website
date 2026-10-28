@@ -1,0 +1,7 @@
+{
+  "title": "Crypto Trading Lab: now its own project",
+  "date": "2026-09-29",
+  "summary": "On 29 September I split my futures trading experiments into a focused paper-trading lab, built around one question: how do you test a trading idea honestly?",
+  "link": "https://github.com/mihir13/crypto-trading-lab",
+  "body": "The lab began as part of a bigger trading project. I split the futures side into its own site so it could concentrate on testing ideas properly.\n\nIt has a cost-aware backtester, swappable strategies (including a rule builder that needs no code) and live paper bots that each run on their own account. A strategy only counts as evidence once it has passed a backtest, an out-of-sample test and a live paper run, in that order.\n\nIt never places real orders. It only reads public market data, and everything is paper money. The last changes that day went into the strategy form, the page templates and the documentation."
+}

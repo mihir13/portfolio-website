@@ -1,0 +1,7 @@
+{
+  "title": "Finance Tracker: a Planner and a by-account view",
+  "date": "2026-10-08",
+  "summary": "The latest update to my self-hosted finance tracker adds a monthly planner. It compares what I planned with what actually happened, showing money in, money out and net for each account.",
+  "link": "https://github.com/mihir13/finance-tracker",
+  "body": "I started this project on 8 September to turn messy bank PDF exports into something I can actually read. It imports CSV and PDF statements, keeps transfers between my own accounts out of the income and spending figures, and models the cheapest way to pay off debt.\n\nThe latest changes, made between 1 and 8 October, add the planner, where I set a planned amount for each item every month and compare it with what really happened. The Transactions page also has a by-account view that shows money in, money out and net for each account, and the chart date range is now separate from the list filters, so filtering the table no longer changes the charts.\n\nEverything runs on my own machine with a single SQLite file. The public code includes a button that loads dummy data, so anyone can try it without importing anything real."
+}
