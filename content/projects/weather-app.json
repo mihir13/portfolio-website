@@ -3,6 +3,10 @@
   "description": "A desktop app that shows live conditions, temperature and a weather icon for any city, using data from the OpenWeatherMap API.",
   "image": "/uploads/weather-app.png",
   "link": "https://github.com/mihir13/WeatherApp",
-  "tags": ["Python", "Tkinter", "REST API"],
-  "order": 2
+  "tags": [
+    "Python",
+    "Tkinter",
+    "REST API"
+  ],
+  "order": 4
 }
