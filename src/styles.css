@@ -120,6 +120,7 @@ main, .nav, .footer { max-width: 960px; margin: 0 auto; padding-inline: 24px; }
 .stats dd { margin: 4px 0 0; font-size: 0.88rem; }
 .note-body { margin-top: 10px; }
 .note-body summary { cursor: pointer; font: 0.8rem var(--mono); color: var(--accent); }
+.notes-more { margin: 18px 0 0; }
 .note .note-body p { margin: 10px 0 0; }
 .hp { position: absolute; left: -9999px; width: 1px; height: 1px; opacity: 0; }
 .cases { display: grid; gap: 16px; }

@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { notes } from "../content.js";
 import Section from "./Section.jsx";
 
@@ -6,12 +7,18 @@ const fmt = (d) => {
   return isNaN(date) ? d : date.toLocaleDateString("en-GB", { day: "numeric", month: "short", year: "numeric" });
 };
 
+// Show the latest few; older ones sit behind a button so the page stays short.
+const VISIBLE = 4;
+
 export default function Notes() {
+  const [showAll, setShowAll] = useState(false);
   if (!notes.length) return null;
+  const shown = showAll ? notes : notes.slice(0, VISIBLE);
+  const hidden = notes.length - VISIBLE;
   return (
     <Section id="notes" index={6} title="Notes">
       <ul className="notes">
-        {notes.map((n) => {
+        {shown.map((n) => {
           const asLink = n.link && !n.body;
           const Tag = asLink ? "a" : "div";
           const props = asLink ? { href: n.link, target: "_blank", rel: "noreferrer" } : {};
@@ -41,6 +48,13 @@ export default function Notes() {
           );
         })}
       </ul>
+      {hidden > 0 && (
+        <p className="notes-more">
+          <button className="btn" onClick={() => setShowAll((v) => !v)} aria-expanded={showAll}>
+            {showAll ? "Show fewer notes" : `Show ${hidden} older ${hidden === 1 ? "note" : "notes"}`}
+          </button>
+        </p>
+      )}
     </Section>
   );
 }
