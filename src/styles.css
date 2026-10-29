@@ -166,6 +166,7 @@ main, .nav, .footer { max-width: 960px; margin: 0 auto; padding-inline: 24px; }
   border-radius: 8px; padding: 10px 12px; resize: vertical;
 }
 .form input:focus, .form textarea:focus { outline: none; border-color: var(--accent); box-shadow: 0 0 0 3px var(--accent-dim); }
+.turnstile { min-height: 65px; }
 .ok { color: var(--accent); margin: 0; } .err { color: #f87171; margin: 0; }
 
 .footer { padding-block: 40px 56px; font-size: 0.8rem; border-top: 1px solid var(--line); }

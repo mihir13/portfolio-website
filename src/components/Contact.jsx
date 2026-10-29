@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import emailjsLib from "@emailjs/browser";
 import { FaGithub, FaLinkedin, FaInstagram, FaYoutube } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
@@ -13,8 +13,54 @@ const icons = {
   youtube: FaYoutube,
 };
 
+const TURNSTILE_SRC = "https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit";
+const SENT = "Message sent. Thanks, I'll reply soon.";
+
+// Loads Cloudflare's Turnstile script once and resolves when window.turnstile is ready.
+let turnstileLoading;
+function loadTurnstile() {
+  if (window.turnstile) return Promise.resolve(window.turnstile);
+  turnstileLoading ||= new Promise((resolve, reject) => {
+    const s = document.createElement("script");
+    s.src = TURNSTILE_SRC;
+    s.async = true;
+    s.onload = () => resolve(window.turnstile);
+    s.onerror = () => { turnstileLoading = null; reject(new Error("turnstile")); };
+    document.head.appendChild(s);
+  });
+  return turnstileLoading;
+}
+
 export default function Contact() {
   const [state, setState] = useState({ status: "idle", msg: "" });
+  // With a Turnstile site key set (Site settings in the editor) the form is checked on the
+  // server by /.netlify/functions/contact. Without one it keeps sending straight via EmailJS.
+  const siteKey = site.turnstileSiteKey;
+  const widgetBox = useRef(null);
+  const widgetId = useRef(null);
+  const [token, setToken] = useState("");
+
+  useEffect(() => {
+    if (!siteKey || !widgetBox.current) return;
+    let gone = false;
+    loadTurnstile()
+      .then((ts) => {
+        if (gone || !widgetBox.current || widgetId.current !== null) return;
+        widgetId.current = ts.render(widgetBox.current, {
+          sitekey: siteKey,
+          theme: "auto",
+          callback: (t) => setToken(t),
+          "expired-callback": () => setToken(""),
+          "error-callback": () => setToken(""),
+        });
+      })
+      .catch(() => setState({ status: "error", msg: "The spam check couldn't load. Please email me directly." }));
+    return () => {
+      gone = true;
+      if (widgetId.current !== null && window.turnstile) window.turnstile.remove(widgetId.current);
+      widgetId.current = null;
+    };
+  }, [siteKey]);
 
   const submit = async (e) => {
     e.preventDefault();
@@ -23,10 +69,37 @@ export default function Contact() {
     // Honeypot: real visitors never fill this hidden field, bots usually do.
     if (data.get("website")) {
       form.reset();
-      return setState({ status: "ok", msg: "Message sent. Thanks, I'll reply soon." });
+      return setState({ status: "ok", msg: SENT });
+    }
+    if (siteKey && !token) {
+      return setState({ status: "error", msg: "Please complete the spam check first." });
     }
     setState({ status: "sending", msg: "" });
     try {
+      if (siteKey) {
+        const res = await fetch("/.netlify/functions/contact", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            name: data.get("name"),
+            email: data.get("email"),
+            message: data.get("message"),
+            website: data.get("website"),
+            token,
+          }),
+        });
+        const out = await res.json().catch(() => ({}));
+        if (!res.ok || !out.ok) {
+          // The token is single-use, so get a fresh one for the next attempt.
+          if (window.turnstile && widgetId.current !== null) window.turnstile.reset(widgetId.current);
+          setToken("");
+          throw new Error(out.error || "failed");
+        }
+        form.reset();
+        if (window.turnstile && widgetId.current !== null) window.turnstile.reset(widgetId.current);
+        setToken("");
+        return setState({ status: "ok", msg: SENT });
+      }
       await emailjsLib.send(
         emailjs.serviceId,
         emailjs.templateId,
@@ -39,7 +112,7 @@ export default function Contact() {
         { publicKey: emailjs.publicKey }
       );
       form.reset();
-      setState({ status: "ok", msg: "Message sent. Thanks, I'll reply soon." });
+      setState({ status: "ok", msg: SENT });
     } catch (err) {
       setState({ status: "error", msg: "Couldn't send that. Please try again or email me directly." });
     }
@@ -74,6 +147,7 @@ export default function Contact() {
           <label>Name<input name="name" required autoComplete="name" /></label>
           <label>Email<input name="email" type="email" required autoComplete="email" /></label>
           <label>Message<textarea name="message" rows="5" required /></label>
+          {siteKey && <div ref={widgetBox} className="turnstile" />}
           <button className="btn primary" disabled={state.status === "sending"}>
             {state.status === "sending" ? "Sending…" : "Send message"}
           </button>

@@ -35,6 +35,7 @@ collections:
               - { name: label, label: Label, widget: string }
           - { name: cv, label: CV (PDF), widget: file, required: false }
           - { name: email, label: Email, widget: string }
+          - { name: turnstileSiteKey, label: Cloudflare Turnstile site key (public; leave empty to switch the spam check off), widget: string, required: false }
           - { name: contact_blurb, label: Contact blurb, widget: text }
           - name: socials
             label: Social links
