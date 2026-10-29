@@ -12,6 +12,7 @@
   "photo": "/uploads/img_0771.jpg",
   "status": "Open to networking",
   "cv": "/uploads/Mihir CV 2026.pdf",
+  "turnstileSiteKey": "0x4AAAAAAFq8upYiwYtPXxLI",
   "headline": "Senior Operations Engineer",
   "location": "Reading 🇬🇧 & Dubai 🇦🇪",
   "now": [
@@ -38,6 +39,5 @@
       "value": "5 yrs",
       "label": "running live customer services, from graduate engineer to team lead"
     }
-  ],
-  "turnstileSiteKey": ""
+  ]
 }
