@@ -30,19 +30,25 @@ npm run build   # outputs dist/
 
 The form can be protected by [Cloudflare Turnstile](https://developers.cloudflare.com/turnstile/) (free).
 With a site key set, the form sends to `netlify/functions/contact.mjs`, which verifies the Turnstile token
-on the server and only then sends the message through EmailJS. With no key set it falls back to sending
-straight from the browser, as before.
+on the server and only then emails the message to you through [Resend](https://resend.com). With no key set
+it falls back to sending straight from the browser via EmailJS, as before.
 
 One-time setup:
 
-1. Cloudflare dashboard > Turnstile > Add site. Hostname `mihirthakker.com`. Copy the **site key** and **secret key**.
-2. Editor (`/admin`) > Site settings > Profile & contact > paste the site key into **Cloudflare Turnstile site key**.
-3. Netlify > Project configuration > Environment variables, add:
-   `TURNSTILE_SECRET_KEY`, `EMAILJS_SERVICE_ID`, `EMAILJS_TEMPLATE_ID`, `EMAILJS_PUBLIC_KEY`, `EMAILJS_PRIVATE_KEY`
-   and optionally `CONTACT_TO`.
-4. EmailJS dashboard > Account > Security: allow API calls from non-browser applications, and copy the private key.
+1. **Resend:** create an account and an API key (starts with `re_`).
+   The default sender (`onboarding@resend.dev`) can only deliver to the email address of your own Resend account.
+   To send to any address, verify your domain in Resend and set `CONTACT_FROM`.
+2. **Cloudflare dashboard > Turnstile:** add a widget for `mihirthakker.com`. Copy the **site key** and **secret key**.
+3. **Netlify > Project configuration > Environment variables**, then redeploy:
+   - `TURNSTILE_SECRET_KEY`: the Turnstile secret key
+   - `RESEND_API_KEY`: the Resend API key
+   - `CONTACT_TO_EMAIL`: where messages are delivered
+   - `CONTACT_FROM` (optional): e.g. `Portfolio <contact@mihirthakker.com>`
+4. **Editor (`/admin`) > Site settings > Profile & contact:** paste the Turnstile **site key** into
+   *Cloudflare Turnstile site key* and publish. Do this last: with a site key set but the variables missing,
+   the form shows an error. Clearing the field switches the check off again.
 
-Tests for the function: `npm test`.
+Test the function with `npm test`.
 
 ## Security headers
 
